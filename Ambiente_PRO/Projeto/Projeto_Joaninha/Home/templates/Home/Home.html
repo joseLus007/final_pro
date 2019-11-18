@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Joaninha</title>
+        <link rel="icon" href="{% static 'imagens/bob.png' %}">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+        
+    </head>
+    <body>
+        {% block conteudo %}
+        <header>
+            <div class="menu"> 
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'home:Home' %}">HOME</a></li>
+                        <li><a href="{% url 'pedidos:pedidos_add' %}">CARDAPIO</a></li>
+                        <li><a href="{% url 'home:QuemSomos' %}">QUEM SOMOS</a></li>
+                        <li><a href="{% url 'home:Localizacao' %}">LOCALIZAÇÃO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div id = "borda"><center><h1>Restaurante Joaninha</h1></center></div>
+        <div id= "borda1"><h2>Seja Bem Vindo</h2></div>
+        <marquee id="joaninha" direction="right"><img src="{% static 'imagens/20-imagem.gif' %}" alt=""></marquee>
+        {% endblock %}
+    </body>
+</html>
